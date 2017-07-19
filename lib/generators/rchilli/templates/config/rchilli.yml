@@ -1,0 +1,14 @@
+development:
+  user_key: ""
+  version: "6.0.0"
+  sub_user_id: ""
+  
+test:
+  user_key: ""
+  version: "6.0.0"
+  sub_user_id: ""
+  
+production:
+  user_key: ""
+  version: "6.0.0"
+  sub_user_id: ""  

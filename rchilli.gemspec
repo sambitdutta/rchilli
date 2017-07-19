@@ -6,8 +6,8 @@ require 'rchilli/version'
 Gem::Specification.new do |spec|
   spec.name          = "rchilli"
   spec.version       = Rchilli::VERSION
-  spec.authors       = ["Sambit (Laptop)"]
-  spec.email         = ["sambit.dutta@globallogic.com"]
+  spec.authors       = ["Sambit"]
+  spec.email         = ["sambit.dutta@outlook.com"]
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
@@ -26,11 +26,14 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
+  
+  spec.add_dependency 'rails', '>= 3'
+  spec.add_dependency "savon"
+  
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   
-  spec.add_development_dependency "savon"
+  
   
 end
