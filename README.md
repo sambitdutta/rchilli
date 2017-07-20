@@ -1,8 +1,6 @@
 # Rchilli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rchilli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+RChilli provides CV/ Resume Parser, Semantic matching engine, Social profile builder. End to end CV Automation tools.
 
 ## Installation
 
@@ -16,13 +14,19 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Generate a default configuration file:
 
-    $ gem install rchilli
+    $ rails g rchilli:install
 
 ## Usage
 
-TODO: Write usage instructions here
+To parse a resume, execute the following statement:
+
+```ruby
+Rchilli::Client.parse_resume_binary binary_content, file_name	
+#The variable binary_content should contain Base64 encoded content of the resume to be parsed
+#file_content should contain the file name as a string literal
+```
 
 ## Development
 
