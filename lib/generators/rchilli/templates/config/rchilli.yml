@@ -1,14 +1,29 @@
 development:
   user_key: ""
-  version: "6.0.0"
+  version: "6.0.6.1001"
   sub_user_id: ""
-  
+  details:
+    post_after_days: 1
+    post_till_days: 7
+    update_record: 0
+    webhook_url:
+
 test:
   user_key: ""
-  version: "6.0.0"
+  version: "6.0.6.1001"
   sub_user_id: ""
+  details:
+    post_after_days: 1
+    post_till_days: 7
+    update_record: 0
+    webhook_url:
   
 production:
   user_key: ""
-  version: "6.0.0"
-  sub_user_id: ""  
+  version: "6.0.6.1001"
+  sub_user_id: ""
+  details:
+    post_after_days: 1
+    post_till_days: 7
+    update_record: 0
+    webhook_url:

@@ -1,6 +1,6 @@
 # Rchilli
 
-RChilli provides CV/ Resume Parser, Semantic matching engine, Social profile builder. End to end CV Automation tools.
+RChilli provides CV/Resume Parser, Semantic matching engine, Social profile builder. End to end CV Automation tools.
 
 ## Installation
 
@@ -20,13 +20,23 @@ Generate a default configuration file:
 
 ## Usage
 
-To parse a resume, execute the following statement:
+To parse a resume using Rchilli enrichment feature, execute the following statement:
+
+Note: Also provide a valid Webhook URL in the config file. Rchilli would access this URL from time to time depending on your settings in rchilli.yml to update the details of the candidate specified in the resume you have uploaded. 
 
 ```ruby
-Rchilli::Client.parse_resume_binary binary_content, file_name	
+Rchilli::Client.process_resume binary_content, file_name	
 #The variable binary_content should contain Base64 encoded content of the resume to be parsed
 #file_content should contain the file name as a string literal
 ```
+To deactivate an uploaded resume, run the following command:
+
+```ruby
+Rchilli::Client.deactivate_resume resume_id	
+#The variable resume_id should contain the resume id provided in the response of the earlier statement 
+```
+
+Failure to parse CV/Resume would raise an exception of Rchilli::ParseError class.
 
 ## Development
 
